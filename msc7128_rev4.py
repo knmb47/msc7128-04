@@ -7,6 +7,7 @@ def reverse(a):
     a = (((a & 0x55) << 1) | ((a & 0xaa) >> 1))
     return a
 
+
 # C7128-04
 def conv_msc(c):
     if (c == '['):
@@ -17,14 +18,20 @@ def conv_msc(c):
         return 28
     if (c == 'Ⅱ'):
         return 29
+    if (c == '_'):
+        return 30
+    if (c == '↓'):
+        return 31
     if (c == '!'):
-        return 32+26+1
+        return 59
     if (c == '→'):
-        return 32+26+2
+        return 60
     if (c == '#'):
-        return 32+26+3
+        return 61
     if (c == '←'):
-        return 32+26+4
+        return 62
+    if (c == '%'):
+        return 63
     if (c == '&'):
         return 64
     if (c == '\''):
